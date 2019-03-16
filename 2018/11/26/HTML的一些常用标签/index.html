@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: true,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="HTML，超文本标记语言（英语：HyperText Markup Language，简称：HTML）是一种用于创建网页的标准标记语言。超文本标记语言，标准通用标记语言下的一个应用。“超文本”就是指页面内可以包含图片、链接等非文字元素。超文本标记语言的结构包括“头”部分（英语：Head）、和“主体”部分（英语：Body），其中“头”部提供关于网页的信息，“主体”部分提供网页的[具体]内容。  ###">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML的一些常用标签">
+<meta property="og:url" content="http://yoursite.com/2018/11/26/HTML的一些常用标签/index.html">
+<meta property="og:site_name" content="ColinWangBlog">
+<meta property="og:description" content="HTML，超文本标记语言（英语：HyperText Markup Language，简称：HTML）是一种用于创建网页的标准标记语言。超文本标记语言，标准通用标记语言下的一个应用。“超文本”就是指页面内可以包含图片、链接等非文字元素。超文本标记语言的结构包括“头”部分（英语：Head）、和“主体”部分（英语：Body），其中“头”部提供关于网页的信息，“主体”部分提供网页的[具体]内容。  ###">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-16T15:09:13.174Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTML的一些常用标签">
+<meta name="twitter:description" content="HTML，超文本标记语言（英语：HyperText Markup Language，简称：HTML）是一种用于创建网页的标准标记语言。超文本标记语言，标准通用标记语言下的一个应用。“超文本”就是指页面内可以包含图片、链接等非文字元素。超文本标记语言的结构包括“头”部分（英语：Head）、和“主体”部分（英语：Body），其中“头”部提供关于网页的信息，“主体”部分提供网页的[具体]内容。  ###">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="ColinWangBlog" type="application/atom+xml">
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/11/26/HTML的一些常用标签/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>HTML的一些常用标签 | ColinWangBlog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ColinWangBlog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/26/HTML的一些常用标签/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Colin Wang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ColinWangBlog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">HTML的一些常用标签
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-26 14:22:07" itemprop="dateCreated datePublished" datetime="2018-11-26T14:22:07+08:00">2018-11-26</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-16 23:09:13" itemprop="dateModified" datetime="2019-03-16T23:09:13+08:00">2019-03-16</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>HTML，超文本标记语言（英语：HyperText Markup Language，简称：HTML）是一种用于创建网页的标准标记语言。超文本标记语言，标准通用标记语言下的一个应用。<br>“超文本”就是指页面内可以包含图片、链接等非文字元素。<br>超文本标记语言的结构包括“头”部分（英语：Head）、和“主体”部分（英语：Body），其中“头”部提供关于网页的信息，“主体”部分提供网页的[具体]内容。</p>
+<hr>
+<p>####一、最基本的HTML5结构<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt; </span><br><span class="line">&lt;head&gt; &lt;!-- head标签是所有头部元素的容器。head标签内的元素可包含脚本、样式表和提供页面的元信息等等。以下标签都可以添加到 head 部分：title、base、link、meta、script 以及style。头部的内容不会显示在浏览器的。 --&gt;</span><br><span class="line">&lt;meta charset=&quot;utf-8&quot;&gt; &lt;!-- 设置字符集，如果字符集不对，可能导致乱码。一般建议utf-8国际编码 --&gt;</span><br><span class="line">&lt;title&gt;网页标题&lt;/title&gt; &lt;!-- SEO相关标签，title定义文档的标题,百度建议一般不要超过32位,meta定义页面关键词和页面的描述--&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt; &lt;!-- 正文部分，所有在浏览器上可见的内容必须写在body标签内部 --&gt;</span><br><span class="line">    </span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+<p>&lt;!DOCTYPE&gt; 声明必须是 HTML 文档的第一行，位于html标签之前。&lt;!DOCTYPE&gt;是指示 web 浏览器关于页面使用哪个 HTML 版本进行编写的指令，有助于浏览器中正确显示网页。其它声明方式及最新html标准可以通过以下链接学习：<br>HTML标准：<a href="https://www.w3.org/TR/html51/" target="_blank" rel="noopener">https://www.w3.org/TR/html51/</a><br>MDN：<a href="https://developer.mozilla.org/zh-CN/" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/</a></p>
+<hr>
+<p>####二、HTML常用标签基本用法<br>1.a标签定义超链接，指定页面间的跳转（HTTP get请求）。链接可以指向外部链接或者页面内部id锚点，可以在当前页面打开，新开窗口。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;指向的链接地址或者网址#ID名&quot; target=&quot;_blank|_self|_top|_parent&quot;&gt;谷歌&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<p>2.form标签定义提交方式、提交地址、表单字符集以及如何对其进行编码，需要提交的表单一定要放在form标签内。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;form id=&quot;form1&quot; name=&quot;form1&quot; method=&quot;post|get&quot; action=&quot;提交到的地址&quot;&gt;&lt;/form&gt;</span><br></pre></td></tr></table></figure></p>
+<p>3、input标签用于为基于Web的表单创建交互式控件，以便接受来自用户的数据。通常和form标签配合使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;form action=&quot;demo_form.asp&quot;&gt;</span><br><span class="line">  输入框: &lt;input type=&quot;text&quot; name=&quot;请输入&quot;&gt;&lt;br&gt;</span><br><span class="line">  按钮: &lt;input type=&quot;button&quot; name=&quot;按钮&quot;&gt;&lt;br&gt; &lt;!--无跳转请求--&gt;</span><br><span class="line">  &lt;input type=&quot;submit&quot; value=&quot;提交&quot;&gt; &lt;!--有跳转请求--&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure></p>
+<p>4、button标签定义一个按钮。在 button元素内部，您可以放置内容，比如文本或图像。这是该元素与使用 input元素（空元素）创建的按钮之间的不同之处。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;button type=&quot;button&quot;&gt;点我!&lt;/button&gt;</span><br></pre></td></tr></table></figure></p>
+<p>5、h1 - h6标签被用来定义 HTML 标题。h1定义重要等级最高的标题，h6定义登记最低的标题。从大到小排列就是这样的。h1&gt;h2&gt;h3&gt;h4&gt;h5&gt;h6<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;h1&gt;这是标题 1&lt;/h1&gt; </span><br><span class="line">&lt;h2&gt;这是标题 2&lt;/h2&gt; </span><br><span class="line">&lt;h3&gt;这是标题 3&lt;/h3&gt; </span><br><span class="line">&lt;h4&gt;这是标题 4&lt;/h4&gt; </span><br><span class="line">&lt;h5&gt;这是标题 5&lt;/h5&gt; </span><br><span class="line">&lt;h6&gt;这是标题 6&lt;/h6&gt;</span><br></pre></td></tr></table></figure></p>
+<p>6、p标签定义段落<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;这是一个段落。&lt;/p&gt;</span><br></pre></td></tr></table></figure></p>
+<p>7、hr标签定义 HTML 页面中的主题变化（比如话题的转移），并显示为一条水平线。br标签插入一个简单的换行符。两者都是空标签，没有结束符。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;h1&gt;HTML&lt;/h1&gt;</span><br><span class="line">&lt;p&gt;HTML 是用于描述 web 页面的一种语言。&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;hr&gt;</span><br><span class="line"></span><br><span class="line">&lt;h1&gt;CSS&lt;/h1&gt;</span><br><span class="line">&lt;p&gt;CSS 定义如何显示 HTML 元素。&lt;/p&gt;</span><br><span class="line">&lt;p&gt; </span><br><span class="line">使用 br 元素&lt;br&gt;在文本中&lt;br&gt;换行。 </span><br><span class="line">&lt;/p&gt;</span><br></pre></td></tr></table></figure></p>
+<p>8、ul标签定义无序列表。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">&lt;li&gt;Coffee&lt;/li&gt;</span><br><span class="line">&lt;li&gt;Tea&lt;/li&gt;</span><br><span class="line">&lt;li&gt;Milk&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure></p>
+<p>9、ol标签定义了一个有序列表，列表排序以数字来显示。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;ol&gt;</span><br><span class="line">  &lt;li&gt;一&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;二&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;三&lt;/li&gt;</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure></p>
+<p>10、small标签定义小型文本（和旁注）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt; runoob.com - the world&apos;s largest web development site.&lt;/p&gt;</span><br><span class="line">&lt;p&gt;&lt;small&gt; Copyright 1999-2050 by Refsnes Data.&lt;/small&gt;&lt;/p&gt;</span><br></pre></td></tr></table></figure></p>
+<p>11、strong标签定义重要的文本。有强调的作用色彩<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;strong&gt;加粗文本，强调重要性&lt;/strong&gt;</span><br></pre></td></tr></table></figure></p>
+<p>12、div标签和span标签是html里没有语义的两个标签，在CSS中通常称为块级元素和内联元素，在html里边没有这样的说法。<br>div标签它是可用于组合其他HTML元素的容器，标签定义 HTML 文档中的一个分隔区块或者一个区域部分。通常用于文档布局，以便通过 CSS 来对这些元素进行格式化。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div style=&quot;color:#0000FF&quot;&gt;</span><br><span class="line">  &lt;h3&gt;这是一个在 div 元素中的标题。&lt;/h3&gt;</span><br><span class="line">  &lt;p&gt;这是一个在 div 元素中的文本。&lt;/p&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<p>13、kbd标签定义键盘文本。目前已废弃，不推荐使用，但 是可以通过CSS实现丰富的效果。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;kbd&gt;键盘输入&lt;/kbd&gt;</span><br></pre></td></tr></table></figure></p>
+<p>14、video标签定义视频，比如电影片段或其他视频流。目前，video元素支持三种视频格式：MP4、WebM、Ogg。可以在 <video> 和 </video> 标签之间放置文本内容，这样不支持video元素的浏览器就可以显示出该标签的信息。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;video width=&quot;320&quot; height=&quot;240&quot; controls&gt;</span><br><span class="line">    &lt;source src=&quot;movie.mp4&quot; type=&quot;video/mp4&quot;&gt;</span><br><span class="line">    &lt;source src=&quot;movie.ogg&quot; type=&quot;video/ogg&quot;&gt;</span><br><span class="line">    您的浏览器不支持 video 标签。</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></table></figure></p>
+<p>15、audio标签，HTML5 规定了在网页上嵌入音频元素的标准。在<audio> 与 </audio> 之间你需要插入浏览器不支持的audio元素的提示文本 。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;audio controls&gt;</span><br><span class="line">  &lt;source src=&quot;horse.ogg&quot; type=&quot;audio/ogg&quot;&gt;</span><br><span class="line">  &lt;source src=&quot;horse.mp3&quot; type=&quot;audio/mpeg&quot;&gt;</span><br><span class="line">您的浏览器不支持 audio 元素。</span><br><span class="line">&lt;/audio&gt;</span><br></pre></td></tr></table></figure></p>
+<p>16、svg标签，SVG 文件可通过以下标签嵌入 HTML 文档：&lt;embed、object或者iframe。这样SVG的代码可以直接嵌入到HTML页面中，或您可以直接链接到SVG文件。</p>
+<p>embed：</p>
+<p>优势：所有主要浏览器都支持，并允许使用脚本<br>缺点：不推荐在HTML4和XHTML中使用（但在HTML5允许）<br>语法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;embed src=&quot;circle1.svg&quot; type=&quot;image/svg+xml&quot; /&gt;</span><br></pre></td></tr></table></figure></p>
+<p>object：</p>
+<p>优势：所有主要浏览器都支持，并支持HTML4，XHTML和HTML5标准<br>缺点：不允许使用脚本。<br>语法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;object data=&quot;circle1.svg&quot; type=&quot;image/svg+xml&quot;&gt;&lt;/object&gt;</span><br></pre></td></tr></table></figure></p>
+<p>iframe：</p>
+<p>优势：所有主要浏览器都支持，并允许使用脚本<br>缺点：不推荐在HTML4和XHTML中使用（但在HTML5允许）<br>语法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe src=&quot;circle1.svg&quot;&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure></p>
+<p>在Firefox、Internet Explorer9、谷歌Chrome和Safari中，你可以直接在HTML嵌入SVG代码。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; version=&quot;1.1&quot;&gt;</span><br><span class="line">   &lt;circle cx=&quot;100&quot; cy=&quot;50&quot; r=&quot;40&quot; stroke=&quot;black&quot; stroke-width=&quot;2&quot; fill=&quot;red&quot; /&gt;</span><br><span class="line">&lt;/svg&gt;</span><br></pre></td></tr></table></figure></p>
+<p>17、span用标签于对文档中的元素进行组合。标签没有固定的格式表现。当对它应用样式时，它才会产生视觉上的变化。提供了一种将文本的一部分或者文档的一部分独立出来的方式。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;我的母亲是 &lt;span style=&quot;color:blue&quot;&gt;伟大&lt;/span&gt; 的。&lt;/p&gt;</span><br></pre></td></tr></table></figure></p>
+<hr>
+<p>####三、HTML注意事项<br>1、HTML标签和属性是不区分大小写的，建议HTML标签和属性都小写，属性值必须用双引号包围。</p>
+<p>2、HTML标签都是以开始标签起始，以结束标签终止。大部分HTML标签都是成对出现的，称为双标签，比如：p标签、div标签，也有的HTML标签在开始标签中结束的标签，称为单标签，比如：hr标签、br标签。大多数 HTML 元素可拥有属性，文本内容都是写在开始标签与结束标签之间。</p>
+<p>3、HTML标签之间尽量缩进与换行，每行代码不要过长，方便阅读和维护。</p>
+<p>4、HTML标签使用必须符合标签嵌套规则。禁止a标签嵌套a标签，p标签嵌套div标签。</p>
+<p>5、建议不使用HTML已经废弃的或者不赞成使用的标签，少使用table布局、iframe框架嵌套以及flash播放器。</p>
+<p>以上也只是讲了一部分常用标签的用法和注意事项。</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/21/HTTP小记/" rel="next" title="git小记(1)">
+                <i class="fa fa-chevron-left"></i> git小记(1)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11/29/CSS经常用到的东西/" rel="prev" title="CSS经常用到的东西">
+                CSS经常用到的东西 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Colin Wang</p>
+              <div class="site-description motion-element" itemprop="description"></div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/Celty117" title="GitHub &rarr; https://github.com/Celty117" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/colinwang1117@gmail.com" title="E-Mail &rarr; colinwang1117@gmail.com"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Colin Wang</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.0.1</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+  
+  <script color="0,0,255" opacity="0.5" zindex="-1" count="99" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/js/src/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=7.0.1"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=7.0.1"></script>
+
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
+
+  
+
+
+  <script src="/js/src/next-boot.js?v=7.0.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
