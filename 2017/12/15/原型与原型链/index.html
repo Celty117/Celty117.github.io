@@ -105,17 +105,20 @@
 
 
 
-  <meta name="description" content="ls用法 输入ls显示当前目录下的所有文件和路径,直接输入ls ls某个文件列表可以显示该目录下的所有文件和路径ls demo-1   cat用法 cat命令由第一行显示档案内容.cat 1.txt   mv用法 mv源路径 目标路径,可以让该文件移动到目标路径下. mv可以重命名或者改变文件类型,比如mv 1.txt 1.md.    touch用法 touch可以创建一个文件,但不能创建目录,">
+  <meta name="description" content="当声明一个对象，那么这个对象一定要找到一个公用的属性，如果没有公用的属性，那么这个对象就没啥用了，除了存数据就没有其他的价值了，有了公用属性之后，就可以调用各种API。所有对象都有 toString 和 valueOf属性，那么我们是否有必要给每个对象一个 toString 和 valueOf 呢？明显不需要。JS 的做法是把 toString 和 valueOf 放在一个对象里（暂且叫做公用属">
 <meta property="og:type" content="article">
-<meta property="og:title" content="命令行小记(1)">
-<meta property="og:url" content="http://yoursite.com/2018/06/23/命令行小记(1)/index.html">
+<meta property="og:title" content="原型与原型链">
+<meta property="og:url" content="http://yoursite.com/2017/12/15/原型与原型链/index.html">
 <meta property="og:site_name" content="ColinWangBlog">
-<meta property="og:description" content="ls用法 输入ls显示当前目录下的所有文件和路径,直接输入ls ls某个文件列表可以显示该目录下的所有文件和路径ls demo-1   cat用法 cat命令由第一行显示档案内容.cat 1.txt   mv用法 mv源路径 目标路径,可以让该文件移动到目标路径下. mv可以重命名或者改变文件类型,比如mv 1.txt 1.md.    touch用法 touch可以创建一个文件,但不能创建目录,">
+<meta property="og:description" content="当声明一个对象，那么这个对象一定要找到一个公用的属性，如果没有公用的属性，那么这个对象就没啥用了，除了存数据就没有其他的价值了，有了公用属性之后，就可以调用各种API。所有对象都有 toString 和 valueOf属性，那么我们是否有必要给每个对象一个 toString 和 valueOf 呢？明显不需要。JS 的做法是把 toString 和 valueOf 放在一个对象里（暂且叫做公用属">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-16T15:21:45.460Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7017681-564c5185f48ec5f8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7017681-00cb9ec502b37395.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2019-03-18T15:26:43.784Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="命令行小记(1)">
-<meta name="twitter:description" content="ls用法 输入ls显示当前目录下的所有文件和路径,直接输入ls ls某个文件列表可以显示该目录下的所有文件和路径ls demo-1   cat用法 cat命令由第一行显示档案内容.cat 1.txt   mv用法 mv源路径 目标路径,可以让该文件移动到目标路径下. mv可以重命名或者改变文件类型,比如mv 1.txt 1.md.    touch用法 touch可以创建一个文件,但不能创建目录,">
+<meta name="twitter:title" content="原型与原型链">
+<meta name="twitter:description" content="当声明一个对象，那么这个对象一定要找到一个公用的属性，如果没有公用的属性，那么这个对象就没啥用了，除了存数据就没有其他的价值了，有了公用属性之后，就可以调用各种API。所有对象都有 toString 和 valueOf属性，那么我们是否有必要给每个对象一个 toString 和 valueOf 呢？明显不需要。JS 的做法是把 toString 和 valueOf 放在一个对象里（暂且叫做公用属">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/7017681-564c5185f48ec5f8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
@@ -124,7 +127,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/06/23/命令行小记(1)/">
+  <link rel="canonical" href="http://yoursite.com/2017/12/15/原型与原型链/">
 
 
 
@@ -134,7 +137,7 @@
   };
 </script>
 
-  <title>命令行小记(1) | ColinWangBlog</title>
+  <title>原型与原型链 | ColinWangBlog</title>
   
 
 
@@ -350,7 +353,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/23/命令行小记(1)/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/15/原型与原型链/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Colin Wang">
@@ -367,7 +370,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">命令行小记(1)
+          <h1 class="post-title" itemprop="name headline">原型与原型链
 
               
             
@@ -393,7 +396,7 @@
                 
               
 
-              <time title="创建时间：2018-06-23 22:07:03" itemprop="dateCreated datePublished" datetime="2018-06-23T22:07:03+08:00">2018-06-23</time>
+              <time title="创建时间：2017-12-15 23:55:48" itemprop="dateCreated datePublished" datetime="2017-12-15T23:55:48+08:00">2017-12-15</time>
             
 
             
@@ -410,7 +413,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-03-16 23:21:45" itemprop="dateModified" datetime="2019-03-16T23:21:45+08:00">2019-03-16</time>
+                <time title="修改时间：2019-03-18 23:26:43" itemprop="dateModified" datetime="2019-03-18T23:26:43+08:00">2019-03-18</time>
               
             
           </span>
@@ -444,25 +447,14 @@
       
 
       
-        <h2 id="ls用法"><a href="#ls用法" class="headerlink" title="ls用法"></a>ls用法</h2><ul>
-<li>输入ls显示当前目录下的所有文件和路径,直接输入<code>ls</code></li>
-<li>ls某个文件列表可以显示该目录下的所有文件和路径<code>ls demo-1</code></li>
-</ul>
-<hr>
-<h2 id="cat用法"><a href="#cat用法" class="headerlink" title="cat用法"></a>cat用法</h2><ul>
-<li>cat命令由第一行显示档案内容.<code>cat 1.txt</code></li>
-</ul>
-<hr>
-<h2 id="mv用法"><a href="#mv用法" class="headerlink" title="mv用法"></a>mv用法</h2><ul>
-<li>mv源路径 目标路径,可以让该文件移动到目标路径下.</li>
-<li>mv可以重命名或者改变文件类型,比如<code>mv 1.txt 1.md</code>. </li>
-</ul>
-<hr>
-<h2 id="touch用法"><a href="#touch用法" class="headerlink" title="touch用法"></a>touch用法</h2><ul>
-<li>touch可以创建一个文件,但不能创建目录,也可以改变文件的更新时间.直接输入<code>touch 1.txt</code></li>
-</ul>
-<hr>
-<h3 id="explainshell-com"><a href="#explainshell-com" class="headerlink" title="explainshell.com"></a>explainshell.com</h3><p>该网站可以解释任何命令,输入任意命令,能解释命令里各个字母代表的意思.</p>
+        <p><strong> 当声明一个对象，那么这个对象一定要找到一个公用的属性，如果没有公用的属性，那么这个对象就没啥用了，除了存数据就没有其他的价值了，有了公用属性之后，就可以调用各种API。<br>所有对象都有 <code>toString</code> 和 <code>valueOf</code>属性，那么我们是否有必要给每个对象一个 <code>toString</code> 和 <code>valueOf</code> 呢？<br>明显不需要。<br>JS 的做法是把 <code>toString</code> 和 <code>valueOf</code> 放在一个对象里（暂且叫做公用属性组成的对象）<br>然后让每一个对象的 <code>__proto__</code>存储这个「公用属性组成的对象」的地址。<br>原型就是公用属性的意思。<br>下图中公用属性通过<code>__proto__</code>串起来的像链一样的路线就是原型链。</strong></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/7017681-564c5185f48ec5f8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="原型链"></p>
+<p>浏览器一开始就在内存里把原型给初始化好了。如下：<br><img src="https://upload-images.jianshu.io/upload_images/7017681-00cb9ec502b37395.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="prototype原型"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var a = &#123;&#125;</span><br><span class="line">// undefined</span><br><span class="line">var b = &#123;&#125;</span><br><span class="line">// undefined</span><br><span class="line">a === b</span><br><span class="line">// false</span><br><span class="line">a.toString === b.toString</span><br><span class="line">// true</span><br></pre></td></tr></table></figure>
+<p>上面代码能看出，<code>a</code>和<code>b</code>是两个完全不一样的对象，严格相等运算返回的结果都是<code>false</code>，但是两者的<code>toString</code>是完全一样的，因为两个对象的<code>toString</code>属性都存在同一个公用属性里。（也就是<code>Object</code>的原型里）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var a = &#123;&#125;</span><br><span class="line">// undefined</span><br><span class="line">Object.prototype</span><br><span class="line">// &#123;constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …&#125;</span><br><span class="line">a.__proto__ === Object.prototype</span><br><span class="line">// true</span><br></pre></td></tr></table></figure>
+<p>上面代码能看出，<code>Object.prototype</code>是<code>Object</code>的公用属性的引用（不引用就要被回收了），<code>a.__proto__</code>也是<code>Object</code>的公用属性的引用，所以严格相等返回的是<code>true</code>（必须要用公用属性）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var n1 = new Number(1)</span><br><span class="line">// undefined</span><br><span class="line">n1.__proto__ === Number.prototype</span><br><span class="line">// true</span><br><span class="line">n1.__proto__.__proto__ === Object.prototype</span><br><span class="line">// true</span><br></pre></td></tr></table></figure></p>
+<p>上列代码表示<code>n1</code>是一个对象，但是对象里面是一个数值<code>1</code>，所以<code>n1.__proto__</code>引用的公共属性跟<code>Number.prototype</code>引用的是同样的属性，<code>Number.prototype</code>引用的公用属性本身里面也有个<code>__proto__</code>引用<code>Object.prototype</code>引用到的公共属性（具体可以看文章开头两幅图来理解），所以<code>n1.__proto__.__proto__</code>是与<code>Object.prototype</code>严格相等的，因为引用的都是同一个公共属性。</p>
 
       
     </div>
@@ -493,8 +485,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/15/原型与原型链/" rel="next" title="原型与原型链">
-                <i class="fa fa-chevron-left"></i> 原型与原型链
+              <a href="/2017/12/13/JS里的数据类型转换/" rel="next" title="JS里的数据类型转换">
+                <i class="fa fa-chevron-left"></i> JS里的数据类型转换
               </a>
             
           </div>
@@ -503,8 +495,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/06/24/git小记(1)/" rel="prev" title="git小记(1)">
-                git小记(1) <i class="fa fa-chevron-right"></i>
+              <a href="/2018/06/23/命令行小记(1)/" rel="prev" title="命令行小记(1)">
+                命令行小记(1) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -549,17 +541,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -638,23 +621,6 @@
         </div>
       </div>
 
-      
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ls用法"><span class="nav-number">1.</span> <span class="nav-text">ls用法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cat用法"><span class="nav-number">2.</span> <span class="nav-text">cat用法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mv用法"><span class="nav-number">3.</span> <span class="nav-text">mv用法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#touch用法"><span class="nav-number">4.</span> <span class="nav-text">touch用法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#explainshell-com"><span class="nav-number">4.1.</span> <span class="nav-text">explainshell.com</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
       
 
       
