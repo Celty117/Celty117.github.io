@@ -105,17 +105,20 @@
 
 
 
-  <meta name="description" content="hexo指导">
+  <meta name="description" content="当声明一个对象，那么这个对象一定要找到一个公用的属性，如果没有公用的属性，那么这个对象就没啥用了，除了存数据就没有其他的价值了，有了公用属性之后，就可以调用各种API。所有对象都有 toString 和 valueOf属性，那么我们是否有必要给每个对象一个 toString 和 valueOf 呢？明显不需要。JS 的做法是把 toString 和 valueOf 放在一个对象里（暂且叫做公用属">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2019/03/13/hello-world/index.html">
+<meta property="og:title" content="原型与原型链">
+<meta property="og:url" content="http://yoursite.com/2018/12/15/原型与原型链/index.html">
 <meta property="og:site_name" content="ColinWangBlog">
-<meta property="og:description" content="hexo指导">
+<meta property="og:description" content="当声明一个对象，那么这个对象一定要找到一个公用的属性，如果没有公用的属性，那么这个对象就没啥用了，除了存数据就没有其他的价值了，有了公用属性之后，就可以调用各种API。所有对象都有 toString 和 valueOf属性，那么我们是否有必要给每个对象一个 toString 和 valueOf 呢？明显不需要。JS 的做法是把 toString 和 valueOf 放在一个对象里（暂且叫做公用属">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-15T15:16:59.645Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7017681-564c5185f48ec5f8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7017681-00cb9ec502b37395.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2019-03-18T15:28:20.786Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="hexo指导">
+<meta name="twitter:title" content="原型与原型链">
+<meta name="twitter:description" content="当声明一个对象，那么这个对象一定要找到一个公用的属性，如果没有公用的属性，那么这个对象就没啥用了，除了存数据就没有其他的价值了，有了公用属性之后，就可以调用各种API。所有对象都有 toString 和 valueOf属性，那么我们是否有必要给每个对象一个 toString 和 valueOf 呢？明显不需要。JS 的做法是把 toString 和 valueOf 放在一个对象里（暂且叫做公用属">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/7017681-564c5185f48ec5f8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
@@ -124,7 +127,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/03/13/hello-world/">
+  <link rel="canonical" href="http://yoursite.com/2018/12/15/原型与原型链/">
 
 
 
@@ -134,7 +137,7 @@
   };
 </script>
 
-  <title>Hello World | ColinWangBlog</title>
+  <title>原型与原型链 | ColinWangBlog</title>
   
 
 
@@ -350,7 +353,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/13/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/15/原型与原型链/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Colin Wang">
@@ -367,7 +370,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World
+          <h1 class="post-title" itemprop="name headline">原型与原型链
 
               
             
@@ -393,7 +396,7 @@
                 
               
 
-              <time title="创建时间：2019-03-13 10:52:54" itemprop="dateCreated datePublished" datetime="2019-03-13T10:52:54+08:00">2019-03-13</time>
+              <time title="创建时间：2018-12-15 23:55:48" itemprop="dateCreated datePublished" datetime="2018-12-15T23:55:48+08:00">2018-12-15</time>
             
 
             
@@ -410,7 +413,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-03-15 23:16:59" itemprop="dateModified" datetime="2019-03-15T23:16:59+08:00">2019-03-15</time>
+                <time title="修改时间：2019-03-18 23:28:20" itemprop="dateModified" datetime="2019-03-18T23:28:20+08:00">2019-03-18</time>
               
             
           </span>
@@ -430,8 +433,6 @@
           
 
           
-            <div class="post-description">hexo指导</div>
-          
 
         </div>
       </header>
@@ -446,15 +447,14 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <p><strong> 当声明一个对象，那么这个对象一定要找到一个公用的属性，如果没有公用的属性，那么这个对象就没啥用了，除了存数据就没有其他的价值了，有了公用属性之后，就可以调用各种API。<br>所有对象都有 <code>toString</code> 和 <code>valueOf</code>属性，那么我们是否有必要给每个对象一个 <code>toString</code> 和 <code>valueOf</code> 呢？<br>明显不需要。<br>JS 的做法是把 <code>toString</code> 和 <code>valueOf</code> 放在一个对象里（暂且叫做公用属性组成的对象）<br>然后让每一个对象的 <code>__proto__</code>存储这个「公用属性组成的对象」的地址。<br>原型就是公用属性的意思。<br>下图中公用属性通过<code>__proto__</code>串起来的像链一样的路线就是原型链。</strong></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/7017681-564c5185f48ec5f8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="原型链"></p>
+<p>浏览器一开始就在内存里把原型给初始化好了。如下：<br><img src="https://upload-images.jianshu.io/upload_images/7017681-00cb9ec502b37395.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="prototype原型"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var a = &#123;&#125;</span><br><span class="line">// undefined</span><br><span class="line">var b = &#123;&#125;</span><br><span class="line">// undefined</span><br><span class="line">a === b</span><br><span class="line">// false</span><br><span class="line">a.toString === b.toString</span><br><span class="line">// true</span><br></pre></td></tr></table></figure>
+<p>上面代码能看出，<code>a</code>和<code>b</code>是两个完全不一样的对象，严格相等运算返回的结果都是<code>false</code>，但是两者的<code>toString</code>是完全一样的，因为两个对象的<code>toString</code>属性都存在同一个公用属性里。（也就是<code>Object</code>的原型里）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var a = &#123;&#125;</span><br><span class="line">// undefined</span><br><span class="line">Object.prototype</span><br><span class="line">// &#123;constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …&#125;</span><br><span class="line">a.__proto__ === Object.prototype</span><br><span class="line">// true</span><br></pre></td></tr></table></figure>
+<p>上面代码能看出，<code>Object.prototype</code>是<code>Object</code>的公用属性的引用（不引用就要被回收了），<code>a.__proto__</code>也是<code>Object</code>的公用属性的引用，所以严格相等返回的是<code>true</code>（必须要用公用属性）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var n1 = new Number(1)</span><br><span class="line">// undefined</span><br><span class="line">n1.__proto__ === Number.prototype</span><br><span class="line">// true</span><br><span class="line">n1.__proto__.__proto__ === Object.prototype</span><br><span class="line">// true</span><br></pre></td></tr></table></figure></p>
+<p>上列代码表示<code>n1</code>是一个对象，但是对象里面是一个数值<code>1</code>，所以<code>n1.__proto__</code>引用的公共属性跟<code>Number.prototype</code>引用的是同样的属性，<code>Number.prototype</code>引用的公用属性本身里面也有个<code>__proto__</code>引用<code>Object.prototype</code>引用到的公共属性（具体可以看文章开头两幅图来理解），所以<code>n1.__proto__.__proto__</code>是与<code>Object.prototype</code>严格相等的，因为引用的都是同一个公共属性。</p>
 
       
     </div>
@@ -485,8 +485,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/19/CSS flex布局中flex container的主要属性总结/" rel="next" title="CSS flex布局中flex container的主要属性总结">
-                <i class="fa fa-chevron-left"></i> CSS flex布局中flex container的主要属性总结
+              <a href="/2018/12/13/JS里的数据类型转换/" rel="next" title="JS里的数据类型转换">
+                <i class="fa fa-chevron-left"></i> JS里的数据类型转换
               </a>
             
           </div>
@@ -494,6 +494,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/12/19/CSS flex布局中flex container的主要属性总结/" rel="prev" title="CSS flex布局中flex container的主要属性总结">
+                CSS flex布局中flex container的主要属性总结 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -537,17 +541,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -626,23 +621,6 @@
         </div>
       </div>
 
-      
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
       
 
       
