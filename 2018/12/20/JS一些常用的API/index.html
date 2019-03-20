@@ -105,20 +105,17 @@
 
 
 
-  <meta name="description" content="当声明一个对象，那么这个对象一定要找到一个公用的属性，如果没有公用的属性，那么这个对象就没啥用了，除了存数据就没有其他的价值了，有了公用属性之后，就可以调用各种API。所有对象都有 toString 和 valueOf属性，那么我们是否有必要给每个对象一个 toString 和 valueOf 呢？明显不需要。JS 的做法是把 toString 和 valueOf 放在一个对象里（暂且叫做公用属">
+  <meta name="description" content="setTimeout()123setTimeout(function () &amp;#123;  enter.classList.remove(&amp;apos;active&amp;apos;)&amp;#125;, 2000)   2秒之后执行括号里的代码。   window.onscrollwindow.scrollY1234567window.onscroll = function () &amp;#123;  if (w">
 <meta property="og:type" content="article">
-<meta property="og:title" content="原型与原型链">
-<meta property="og:url" content="http://yoursite.com/2018/12/15/原型与原型链/index.html">
+<meta property="og:title" content="JS一些常用的API">
+<meta property="og:url" content="http://yoursite.com/2018/12/20/JS一些常用的API/index.html">
 <meta property="og:site_name" content="ColinWangBlog">
-<meta property="og:description" content="当声明一个对象，那么这个对象一定要找到一个公用的属性，如果没有公用的属性，那么这个对象就没啥用了，除了存数据就没有其他的价值了，有了公用属性之后，就可以调用各种API。所有对象都有 toString 和 valueOf属性，那么我们是否有必要给每个对象一个 toString 和 valueOf 呢？明显不需要。JS 的做法是把 toString 和 valueOf 放在一个对象里（暂且叫做公用属">
+<meta property="og:description" content="setTimeout()123setTimeout(function () &amp;#123;  enter.classList.remove(&amp;apos;active&amp;apos;)&amp;#125;, 2000)   2秒之后执行括号里的代码。   window.onscrollwindow.scrollY1234567window.onscroll = function () &amp;#123;  if (w">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7017681-564c5185f48ec5f8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7017681-00cb9ec502b37395.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2019-03-18T15:28:20.786Z">
+<meta property="og:updated_time" content="2019-03-20T14:00:13.194Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="原型与原型链">
-<meta name="twitter:description" content="当声明一个对象，那么这个对象一定要找到一个公用的属性，如果没有公用的属性，那么这个对象就没啥用了，除了存数据就没有其他的价值了，有了公用属性之后，就可以调用各种API。所有对象都有 toString 和 valueOf属性，那么我们是否有必要给每个对象一个 toString 和 valueOf 呢？明显不需要。JS 的做法是把 toString 和 valueOf 放在一个对象里（暂且叫做公用属">
-<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/7017681-564c5185f48ec5f8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="JS一些常用的API">
+<meta name="twitter:description" content="setTimeout()123setTimeout(function () &amp;#123;  enter.classList.remove(&amp;apos;active&amp;apos;)&amp;#125;, 2000)   2秒之后执行括号里的代码。   window.onscrollwindow.scrollY1234567window.onscroll = function () &amp;#123;  if (w">
 
 
 
@@ -127,7 +124,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/12/15/原型与原型链/">
+  <link rel="canonical" href="http://yoursite.com/2018/12/20/JS一些常用的API/">
 
 
 
@@ -137,7 +134,7 @@
   };
 </script>
 
-  <title>原型与原型链 | ColinWangBlog</title>
+  <title>JS一些常用的API | ColinWangBlog</title>
   
 
 
@@ -353,7 +350,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/15/原型与原型链/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/20/JS一些常用的API/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Colin Wang">
@@ -370,7 +367,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">原型与原型链
+          <h1 class="post-title" itemprop="name headline">JS一些常用的API
 
               
             
@@ -396,7 +393,7 @@
                 
               
 
-              <time title="创建时间：2018-12-15 23:55:48" itemprop="dateCreated datePublished" datetime="2018-12-15T23:55:48+08:00">2018-12-15</time>
+              <time title="创建时间：2018-12-20 21:35:48" itemprop="dateCreated datePublished" datetime="2018-12-20T21:35:48+08:00">2018-12-20</time>
             
 
             
@@ -413,7 +410,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-03-18 23:28:20" itemprop="dateModified" datetime="2019-03-18T23:28:20+08:00">2019-03-18</time>
+                <time title="修改时间：2019-03-20 22:00:13" itemprop="dateModified" datetime="2019-03-20T22:00:13+08:00">2019-03-20</time>
               
             
           </span>
@@ -447,14 +444,32 @@
       
 
       
-        <p><strong> 当声明一个对象，那么这个对象一定要找到一个公用的属性，如果没有公用的属性，那么这个对象就没啥用了，除了存数据就没有其他的价值了，有了公用属性之后，就可以调用各种API。<br>所有对象都有 <code>toString</code> 和 <code>valueOf</code>属性，那么我们是否有必要给每个对象一个 <code>toString</code> 和 <code>valueOf</code> 呢？<br>明显不需要。<br>JS 的做法是把 <code>toString</code> 和 <code>valueOf</code> 放在一个对象里（暂且叫做公用属性组成的对象）<br>然后让每一个对象的 <code>__proto__</code>存储这个「公用属性组成的对象」的地址。<br>原型就是公用属性的意思。<br>下图中公用属性通过<code>__proto__</code>串起来的像链一样的路线就是原型链。</strong></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/7017681-564c5185f48ec5f8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="原型链"></p>
-<p>浏览器一开始就在内存里把原型给初始化好了。如下：<br><img src="https://upload-images.jianshu.io/upload_images/7017681-00cb9ec502b37395.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="prototype原型"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var a = &#123;&#125;</span><br><span class="line">// undefined</span><br><span class="line">var b = &#123;&#125;</span><br><span class="line">// undefined</span><br><span class="line">a === b</span><br><span class="line">// false</span><br><span class="line">a.toString === b.toString</span><br><span class="line">// true</span><br></pre></td></tr></table></figure>
-<p>上面代码能看出，<code>a</code>和<code>b</code>是两个完全不一样的对象，严格相等运算返回的结果都是<code>false</code>，但是两者的<code>toString</code>是完全一样的，因为两个对象的<code>toString</code>属性都存在同一个公用属性里。（也就是<code>Object</code>的原型里）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var a = &#123;&#125;</span><br><span class="line">// undefined</span><br><span class="line">Object.prototype</span><br><span class="line">// &#123;constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …&#125;</span><br><span class="line">a.__proto__ === Object.prototype</span><br><span class="line">// true</span><br></pre></td></tr></table></figure>
-<p>上面代码能看出，<code>Object.prototype</code>是<code>Object</code>的公用属性的引用（不引用就要被回收了），<code>a.__proto__</code>也是<code>Object</code>的公用属性的引用，所以严格相等返回的是<code>true</code>（必须要用公用属性）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var n1 = new Number(1)</span><br><span class="line">// undefined</span><br><span class="line">n1.__proto__ === Number.prototype</span><br><span class="line">// true</span><br><span class="line">n1.__proto__.__proto__ === Object.prototype</span><br><span class="line">// true</span><br></pre></td></tr></table></figure></p>
-<p>上列代码表示<code>n1</code>是一个对象，但是对象里面是一个数值<code>1</code>，所以<code>n1.__proto__</code>引用的公共属性跟<code>Number.prototype</code>引用的是同样的属性，<code>Number.prototype</code>引用的公用属性本身里面也有个<code>__proto__</code>引用<code>Object.prototype</code>引用到的公共属性（具体可以看文章开头两幅图来理解），所以<code>n1.__proto__.__proto__</code>是与<code>Object.prototype</code>严格相等的，因为引用的都是同一个公共属性。</p>
+        <ol>
+<li>setTimeout()<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(function () &#123;</span><br><span class="line">  enter.classList.remove(&apos;active&apos;)</span><br><span class="line">&#125;, 2000)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>2秒之后执行括号里的代码。</p>
+<hr>
+<ol start="2">
+<li>window.onscroll<br>window.scrollY<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">window.onscroll = function () &#123;</span><br><span class="line">  if (window.scrollY &gt; 0) &#123;</span><br><span class="line">    topNavBar.classList.add(&apos;sticky&apos;)</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    topNavBar.classList.remove(&apos;sticky&apos;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>window.onscroll：在用户滑动浏览器窗口的时候触发一个函数。<br>window.scrollY：获取到浏览器窗口滚动的高度。</p>
+<hr>
+<p>3.document.querySelectorAll()<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let liTags = document.querySelectorAll(&apos;nav.menu&gt;ul&gt;li&apos;)</span><br></pre></td></tr></table></figure></p>
+<p>接受一个选择器，返回选择器对应的所有元素。</p>
+<hr>
+<ol start="4">
+<li>.onmouseenter<br>.onmouseleave<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">liTags[i].onmouseenter = function (x) &#123;</span><br><span class="line">  x.currentTarget.classList.add(&apos;active&apos;)</span><br><span class="line">&#125;</span><br><span class="line">liTags[i].onmouseleave = function (x) &#123;</span><br><span class="line">  x.currentTarget.classList.remove(&apos;active&apos;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>.onmouseenter：当鼠标进入一个元素的时候，会触发一个函数。<br>.onmouseleave：当鼠标离开一个元素的时候，会触发一个函数。</p>
+<hr>
+<ol start="5">
+<li>.preventDefault()<br>.getAttribute()<br>document.querySelector()<br>.offsetTop<br>window.scrollTo()</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">for(let i=0;i&lt;aTags.length;i++)&#123;</span><br><span class="line">  aTags[i].onclick = function(x)&#123;</span><br><span class="line">    x.preventDefault()  </span><br><span class="line">    let a = x.currentTarget   </span><br><span class="line">    let href = a.getAttribute(&apos;href&apos;)  </span><br><span class="line">    let element = document.querySelector(href) </span><br><span class="line">    let top = element.offsetTop   </span><br><span class="line">    window.scrollTo(0,top-70)   </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>.preventDefault()：阻止默认动作。<br>.getAttribute()：获取到这个标签上写的原文，而不是浏览器修改（比如加了http协议的东西）。<br>document.querySelector()：与加了All相比，只会返回一个元素，而不是一个数组。<br>.offsetTop：获取一个元素距离到页面顶部的像素数（不是浏览器窗口顶部）。<br>window.scrollTo()：让浏览器窗口滑动到某个位置，括号里是左右方向和上下方向滑动的位置的值。</p>
 
       
     </div>
@@ -485,8 +500,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/13/JS里的数据类型转换/" rel="next" title="JS里的数据类型转换">
-                <i class="fa fa-chevron-left"></i> JS里的数据类型转换
+              <a href="/2018/12/20/模拟jQuery实现原理/" rel="next" title="模拟jQuery实现原理">
+                <i class="fa fa-chevron-left"></i> 模拟jQuery实现原理
               </a>
             
           </div>
@@ -495,8 +510,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/12/19/VS code 常用快捷键/" rel="prev" title="VS code 常用快捷键">
-                VS code 常用快捷键 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/03/13/hello-world/" rel="prev" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

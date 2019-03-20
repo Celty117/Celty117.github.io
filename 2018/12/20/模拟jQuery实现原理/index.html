@@ -105,20 +105,17 @@
 
 
 
-  <meta name="description" content="当声明一个对象，那么这个对象一定要找到一个公用的属性，如果没有公用的属性，那么这个对象就没啥用了，除了存数据就没有其他的价值了，有了公用属性之后，就可以调用各种API。所有对象都有 toString 和 valueOf属性，那么我们是否有必要给每个对象一个 toString 和 valueOf 呢？明显不需要。JS 的做法是把 toString 和 valueOf 放在一个对象里（暂且叫做公用属">
+  <meta name="description" content="jQuery实质上就是一个构造函数，接受一个参数，这个参数可能是节点，然后返回一个方法对象是操作节点。 大概模拟下jQuery实现原理。 细节注释如下： 1234567891011121314151617181920212223242526272829303132333435window.jQuery = function (nodeOrSelector) &amp;#123;  // 参数可能是node">
 <meta property="og:type" content="article">
-<meta property="og:title" content="原型与原型链">
-<meta property="og:url" content="http://yoursite.com/2018/12/15/原型与原型链/index.html">
+<meta property="og:title" content="模拟jQuery实现原理">
+<meta property="og:url" content="http://yoursite.com/2018/12/20/模拟jQuery实现原理/index.html">
 <meta property="og:site_name" content="ColinWangBlog">
-<meta property="og:description" content="当声明一个对象，那么这个对象一定要找到一个公用的属性，如果没有公用的属性，那么这个对象就没啥用了，除了存数据就没有其他的价值了，有了公用属性之后，就可以调用各种API。所有对象都有 toString 和 valueOf属性，那么我们是否有必要给每个对象一个 toString 和 valueOf 呢？明显不需要。JS 的做法是把 toString 和 valueOf 放在一个对象里（暂且叫做公用属">
+<meta property="og:description" content="jQuery实质上就是一个构造函数，接受一个参数，这个参数可能是节点，然后返回一个方法对象是操作节点。 大概模拟下jQuery实现原理。 细节注释如下： 1234567891011121314151617181920212223242526272829303132333435window.jQuery = function (nodeOrSelector) &amp;#123;  // 参数可能是node">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7017681-564c5185f48ec5f8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7017681-00cb9ec502b37395.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2019-03-18T15:28:20.786Z">
+<meta property="og:updated_time" content="2019-03-20T14:01:01.692Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="原型与原型链">
-<meta name="twitter:description" content="当声明一个对象，那么这个对象一定要找到一个公用的属性，如果没有公用的属性，那么这个对象就没啥用了，除了存数据就没有其他的价值了，有了公用属性之后，就可以调用各种API。所有对象都有 toString 和 valueOf属性，那么我们是否有必要给每个对象一个 toString 和 valueOf 呢？明显不需要。JS 的做法是把 toString 和 valueOf 放在一个对象里（暂且叫做公用属">
-<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/7017681-564c5185f48ec5f8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="模拟jQuery实现原理">
+<meta name="twitter:description" content="jQuery实质上就是一个构造函数，接受一个参数，这个参数可能是节点，然后返回一个方法对象是操作节点。 大概模拟下jQuery实现原理。 细节注释如下： 1234567891011121314151617181920212223242526272829303132333435window.jQuery = function (nodeOrSelector) &amp;#123;  // 参数可能是node">
 
 
 
@@ -127,7 +124,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/12/15/原型与原型链/">
+  <link rel="canonical" href="http://yoursite.com/2018/12/20/模拟jQuery实现原理/">
 
 
 
@@ -137,7 +134,7 @@
   };
 </script>
 
-  <title>原型与原型链 | ColinWangBlog</title>
+  <title>模拟jQuery实现原理 | ColinWangBlog</title>
   
 
 
@@ -353,7 +350,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/15/原型与原型链/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/20/模拟jQuery实现原理/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Colin Wang">
@@ -370,7 +367,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">原型与原型链
+          <h1 class="post-title" itemprop="name headline">模拟jQuery实现原理
 
               
             
@@ -396,7 +393,7 @@
                 
               
 
-              <time title="创建时间：2018-12-15 23:55:48" itemprop="dateCreated datePublished" datetime="2018-12-15T23:55:48+08:00">2018-12-15</time>
+              <time title="创建时间：2018-12-20 21:35:48" itemprop="dateCreated datePublished" datetime="2018-12-20T21:35:48+08:00">2018-12-20</time>
             
 
             
@@ -413,7 +410,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-03-18 23:28:20" itemprop="dateModified" datetime="2019-03-18T23:28:20+08:00">2019-03-18</time>
+                <time title="修改时间：2019-03-20 22:01:01" itemprop="dateModified" datetime="2019-03-20T22:01:01+08:00">2019-03-20</time>
               
             
           </span>
@@ -447,15 +444,10 @@
       
 
       
-        <p><strong> 当声明一个对象，那么这个对象一定要找到一个公用的属性，如果没有公用的属性，那么这个对象就没啥用了，除了存数据就没有其他的价值了，有了公用属性之后，就可以调用各种API。<br>所有对象都有 <code>toString</code> 和 <code>valueOf</code>属性，那么我们是否有必要给每个对象一个 <code>toString</code> 和 <code>valueOf</code> 呢？<br>明显不需要。<br>JS 的做法是把 <code>toString</code> 和 <code>valueOf</code> 放在一个对象里（暂且叫做公用属性组成的对象）<br>然后让每一个对象的 <code>__proto__</code>存储这个「公用属性组成的对象」的地址。<br>原型就是公用属性的意思。<br>下图中公用属性通过<code>__proto__</code>串起来的像链一样的路线就是原型链。</strong></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/7017681-564c5185f48ec5f8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="原型链"></p>
-<p>浏览器一开始就在内存里把原型给初始化好了。如下：<br><img src="https://upload-images.jianshu.io/upload_images/7017681-00cb9ec502b37395.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="prototype原型"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var a = &#123;&#125;</span><br><span class="line">// undefined</span><br><span class="line">var b = &#123;&#125;</span><br><span class="line">// undefined</span><br><span class="line">a === b</span><br><span class="line">// false</span><br><span class="line">a.toString === b.toString</span><br><span class="line">// true</span><br></pre></td></tr></table></figure>
-<p>上面代码能看出，<code>a</code>和<code>b</code>是两个完全不一样的对象，严格相等运算返回的结果都是<code>false</code>，但是两者的<code>toString</code>是完全一样的，因为两个对象的<code>toString</code>属性都存在同一个公用属性里。（也就是<code>Object</code>的原型里）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var a = &#123;&#125;</span><br><span class="line">// undefined</span><br><span class="line">Object.prototype</span><br><span class="line">// &#123;constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …&#125;</span><br><span class="line">a.__proto__ === Object.prototype</span><br><span class="line">// true</span><br></pre></td></tr></table></figure>
-<p>上面代码能看出，<code>Object.prototype</code>是<code>Object</code>的公用属性的引用（不引用就要被回收了），<code>a.__proto__</code>也是<code>Object</code>的公用属性的引用，所以严格相等返回的是<code>true</code>（必须要用公用属性）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var n1 = new Number(1)</span><br><span class="line">// undefined</span><br><span class="line">n1.__proto__ === Number.prototype</span><br><span class="line">// true</span><br><span class="line">n1.__proto__.__proto__ === Object.prototype</span><br><span class="line">// true</span><br></pre></td></tr></table></figure></p>
-<p>上列代码表示<code>n1</code>是一个对象，但是对象里面是一个数值<code>1</code>，所以<code>n1.__proto__</code>引用的公共属性跟<code>Number.prototype</code>引用的是同样的属性，<code>Number.prototype</code>引用的公用属性本身里面也有个<code>__proto__</code>引用<code>Object.prototype</code>引用到的公共属性（具体可以看文章开头两幅图来理解），所以<code>n1.__proto__.__proto__</code>是与<code>Object.prototype</code>严格相等的，因为引用的都是同一个公共属性。</p>
-
+        <p>jQuery实质上就是一个构造函数，接受一个参数，这个参数可能是节点，然后返回一个方法对象是操作节点。</p>
+<p>大概模拟下jQuery实现原理。</p>
+<p>细节注释如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">window.jQuery = function (nodeOrSelector) &#123;  // 参数可能是node，也可能是选择器</span><br><span class="line">  let nodes = &#123;&#125;  // 先声明一个空对象，伪数组</span><br><span class="line">  if (typeof nodeOrSelector === &apos;string&apos;) &#123;  // 字符串检测，如果是个字符串或多个字符串</span><br><span class="line">    let temp = document.querySelectorAll(nodeOrSelector)  // 找一个节点或多个节点,temp是伪数组，不想要nodelist的原型</span><br><span class="line">    for (let i = 0; i &lt; temp.length; i++) &#123;  // 遍历这个temp</span><br><span class="line">      nodes[i] = temp[i]</span><br><span class="line">    &#125;</span><br><span class="line">    nodes.length = temp.length  // 生成新的纯净的伪数组,有纯净的原型链</span><br><span class="line">  &#125; else if (nodeOrSelector instanceof Node) &#123;  // 如果传的是一个节点</span><br><span class="line">    nodes = &#123;   // 前一种情况返回伪数组，另外一种情况也应该返回伪数组，不会被弄晕</span><br><span class="line">      0: nodeOrSelector,</span><br><span class="line">      length: 1</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  nodes.addClass = function (classes) &#123;</span><br><span class="line">    [classes].forEach((value) =&gt; &#123;  // 有可能每个节点上要加不止一个class（classes可能是个伪数组），所以需要foreach()方法,对classes里每个值执行函数</span><br><span class="line">      for (let i = 0; i &lt; nodes.length; i++) &#123;  // 要加多个元素节点的class，所以需要遍历，根据nodes的个数</span><br><span class="line">        nodes[i].classList.add(value)   // 对每个遍历到的nodes的值addclass（根据classes里value个数，因为foreach方法，这个for循环要轮几大轮）</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  nodes.setText = function (text) &#123;</span><br><span class="line">    for (let i = 0; i &lt; nodes.length; i++) &#123;  // 利用for循环遍历nodes</span><br><span class="line">      nodes[i].textContent = text   // nodes里每个value的textcontent都等于text</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  return nodes  // 返回nodes</span><br><span class="line">&#125;</span><br><span class="line">window.$ = jQuery</span><br><span class="line"></span><br><span class="line">var $div = $(&apos;div&apos;)</span><br><span class="line">$div.addClass(&apos;blue&apos;) // 可将所有 div 的 class 添加一个 blue</span><br><span class="line">$div.setText(&apos;hi&apos;) // 可将所有 div 的 textContent 变为 hi</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -485,8 +477,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/13/JS里的数据类型转换/" rel="next" title="JS里的数据类型转换">
-                <i class="fa fa-chevron-left"></i> JS里的数据类型转换
+              <a href="/2018/12/19/CSS flex布局中flex container的主要属性总结/" rel="next" title="CSS flex布局中flex container的主要属性总结">
+                <i class="fa fa-chevron-left"></i> CSS flex布局中flex container的主要属性总结
               </a>
             
           </div>
@@ -495,8 +487,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/12/19/VS code 常用快捷键/" rel="prev" title="VS code 常用快捷键">
-                VS code 常用快捷键 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/12/20/JS一些常用的API/" rel="prev" title="JS一些常用的API">
+                JS一些常用的API <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

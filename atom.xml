@@ -35,6 +35,52 @@
   </entry>
   
   <entry>
+    <title>JS一些常用的API</title>
+    <link href="http://yoursite.com/2018/12/20/JS%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E7%9A%84API/"/>
+    <id>http://yoursite.com/2018/12/20/JS一些常用的API/</id>
+    <published>2018-12-20T13:35:48.000Z</published>
+    <updated>2019-03-20T14:00:13.194Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>setTimeout()<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(function () &#123;</span><br><span class="line">  enter.classList.remove(&apos;active&apos;)</span><br><span class="line">&#125;, 2000)</span><br></pre></td></tr></table></figure></li></ol><p>2秒之后执行括号里的代码。</p><hr><ol start="2"><li>window.onscroll<br>window.scrollY<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">window.onscroll = function () &#123;</span><br><span class="line">  if (window.scrollY &gt; 0) &#123;</span><br><span class="line">    topNavBar.classList.add(&apos;sticky&apos;)</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    topNavBar.classList.remove(&apos;sticky&apos;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ol><p>window.onscroll：在用户滑动浏览器窗口的时候触发一个函数。<br>window.scrollY：获取到浏览器窗口滚动的高度。</p><hr><p>3.document.querySelectorAll()<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let liTags = document.querySelectorAll(&apos;nav.menu&gt;ul&gt;li&apos;)</span><br></pre></td></tr></table></figure></p><p>接受一个选择器，返回选择器对应的所有元素。</p><hr><ol start="4"><li>.onmouseenter<br>.onmouseleave<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">liTags[i].onmouseenter = function (x) &#123;</span><br><span class="line">  x.currentTarget.classList.add(&apos;active&apos;)</span><br><span class="line">&#125;</span><br><span class="line">liTags[i].onmouseleave = function (x) &#123;</span><br><span class="line">  x.currentTarget.classList.remove(&apos;active&apos;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ol><p>.onmouseenter：当鼠标进入一个元素的时候，会触发一个函数。<br>.onmouseleave：当鼠标离开一个元素的时候，会触发一个函数。</p><hr><ol start="5"><li>.preventDefault()<br>.getAttribute()<br>document.querySelector()<br>.offsetTop<br>window.scrollTo()</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">for(let i=0;i&lt;aTags.length;i++)&#123;</span><br><span class="line">  aTags[i].onclick = function(x)&#123;</span><br><span class="line">    x.preventDefault()  </span><br><span class="line">    let a = x.currentTarget   </span><br><span class="line">    let href = a.getAttribute(&apos;href&apos;)  </span><br><span class="line">    let element = document.querySelector(href) </span><br><span class="line">    let top = element.offsetTop   </span><br><span class="line">    window.scrollTo(0,top-70)   </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>.preventDefault()：阻止默认动作。<br>.getAttribute()：获取到这个标签上写的原文，而不是浏览器修改（比如加了http协议的东西）。<br>document.querySelector()：与加了All相比，只会返回一个元素，而不是一个数组。<br>.offsetTop：获取一个元素距离到页面顶部的像素数（不是浏览器窗口顶部）。<br>window.scrollTo()：让浏览器窗口滑动到某个位置，括号里是左右方向和上下方向滑动的位置的值。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;setTimeout()&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>模拟jQuery实现原理</title>
+    <link href="http://yoursite.com/2018/12/20/%E6%A8%A1%E6%8B%9FjQuery%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86/"/>
+    <id>http://yoursite.com/2018/12/20/模拟jQuery实现原理/</id>
+    <published>2018-12-20T13:35:48.000Z</published>
+    <updated>2019-03-20T14:01:01.692Z</updated>
+    
+    <content type="html"><![CDATA[<p>jQuery实质上就是一个构造函数，接受一个参数，这个参数可能是节点，然后返回一个方法对象是操作节点。</p><p>大概模拟下jQuery实现原理。</p><p>细节注释如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">window.jQuery = function (nodeOrSelector) &#123;  // 参数可能是node，也可能是选择器</span><br><span class="line">  let nodes = &#123;&#125;  // 先声明一个空对象，伪数组</span><br><span class="line">  if (typeof nodeOrSelector === &apos;string&apos;) &#123;  // 字符串检测，如果是个字符串或多个字符串</span><br><span class="line">    let temp = document.querySelectorAll(nodeOrSelector)  // 找一个节点或多个节点,temp是伪数组，不想要nodelist的原型</span><br><span class="line">    for (let i = 0; i &lt; temp.length; i++) &#123;  // 遍历这个temp</span><br><span class="line">      nodes[i] = temp[i]</span><br><span class="line">    &#125;</span><br><span class="line">    nodes.length = temp.length  // 生成新的纯净的伪数组,有纯净的原型链</span><br><span class="line">  &#125; else if (nodeOrSelector instanceof Node) &#123;  // 如果传的是一个节点</span><br><span class="line">    nodes = &#123;   // 前一种情况返回伪数组，另外一种情况也应该返回伪数组，不会被弄晕</span><br><span class="line">      0: nodeOrSelector,</span><br><span class="line">      length: 1</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  nodes.addClass = function (classes) &#123;</span><br><span class="line">    [classes].forEach((value) =&gt; &#123;  // 有可能每个节点上要加不止一个class（classes可能是个伪数组），所以需要foreach()方法,对classes里每个值执行函数</span><br><span class="line">      for (let i = 0; i &lt; nodes.length; i++) &#123;  // 要加多个元素节点的class，所以需要遍历，根据nodes的个数</span><br><span class="line">        nodes[i].classList.add(value)   // 对每个遍历到的nodes的值addclass（根据classes里value个数，因为foreach方法，这个for循环要轮几大轮）</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  nodes.setText = function (text) &#123;</span><br><span class="line">    for (let i = 0; i &lt; nodes.length; i++) &#123;  // 利用for循环遍历nodes</span><br><span class="line">      nodes[i].textContent = text   // nodes里每个value的textcontent都等于text</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  return nodes  // 返回nodes</span><br><span class="line">&#125;</span><br><span class="line">window.$ = jQuery</span><br><span class="line"></span><br><span class="line">var $div = $(&apos;div&apos;)</span><br><span class="line">$div.addClass(&apos;blue&apos;) // 可将所有 div 的 class 添加一个 blue</span><br><span class="line">$div.setText(&apos;hi&apos;) // 可将所有 div 的 textContent 变为 hi</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;jQuery实质上就是一个构造函数，接受一个参数，这个参数可能是节点，然后返回一个方法对象是操作节点。&lt;/p&gt;
+&lt;p&gt;大概模拟下jQuery实现原理。&lt;/p&gt;
+&lt;p&gt;细节注释如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>CSS flex布局中flex container的主要属性总结</title>
     <link href="http://yoursite.com/2018/12/19/CSS%20flex%E5%B8%83%E5%B1%80%E4%B8%ADflex%20container%E7%9A%84%E4%B8%BB%E8%A6%81%E5%B1%9E%E6%80%A7%E6%80%BB%E7%BB%93/"/>
     <id>http://yoursite.com/2018/12/19/CSS flex布局中flex container的主要属性总结/</id>
@@ -48,6 +94,29 @@
       
       
         &lt;h4 id=&quot;一、flex-container的属性&quot;&gt;&lt;a href=&quot;#一、flex-container的属性&quot; class=&quot;headerlink&quot; title=&quot;一、flex container的属性&quot;&gt;&lt;/a&gt;一、flex container的属性&lt;/h4&gt;&lt;p&gt;fl
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>VS code 常用快捷键</title>
+    <link href="http://yoursite.com/2018/12/19/VS%20code%20%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+    <id>http://yoursite.com/2018/12/19/VS code 常用快捷键/</id>
+    <published>2018-12-19T13:35:48.000Z</published>
+    <updated>2019-03-20T13:58:48.636Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="编辑器与窗口管理"><a href="#编辑器与窗口管理" class="headerlink" title="编辑器与窗口管理"></a>编辑器与窗口管理</h3><ul><li>文件之间切换 <code>Ctrl+Tab</code></li><li>左中右 3 个编辑器的快捷键 <code>Ctrl+1</code> <code>Ctrl+2</code> <code>Ctrl+3</code></li></ul><h3 id="代码编辑"><a href="#代码编辑" class="headerlink" title="代码编辑"></a>代码编辑</h3><h5 id="格式调整"><a href="#格式调整" class="headerlink" title="格式调整"></a>格式调整</h5><p>代码行缩进: <code>Ctrl+[</code>、 <code>Ctrl+]</code><br><code>Ctrl+C</code> 、 <code>Ctrl+V</code> 复制或剪切当前行/当前选中内容<br>代码对齐： <code>Shift+Alt+F</code><br>上向下一行或下向上一行互换： <code>Alt+Up</code>、  <code>Alt+Down</code><br>在当前行下边插入一行: <code>Ctrl+Enter</code><br>在当前行上方插入一行: <code>Shift+Enter</code></p><h5 id="光标相关"><a href="#光标相关" class="headerlink" title="光标相关"></a>光标相关</h5><p>移动到行首： <code>Home</code><br>移动到行尾： <code>End</code><br>移动到文件结尾： <code>Ctrl+End</code><br>移动到文件开头： <code>Ctrl+Home</code><br>删除光标右侧的所有字： <code>Ctrl+Delete</code><br>删除光标所在一整行：<code>Shift+Delete</code><br><code>Ctrl+D</code> 下一个匹配的也被选中<br>同时选中所有匹配： <code>Ctrl+Shift+L</code><br>选中所有匹配词批量编辑：鼠标高亮选中需要查找的词，按下 <code>Ctrl + Shift + L</code>键，即可快速选中当前文件中所有匹配的词，并在每一个词后面有一个编辑光标，可批量同步编辑</p><hr><p>补充中。。。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;编辑器与窗口管理&quot;&gt;&lt;a href=&quot;#编辑器与窗口管理&quot; class=&quot;headerlink&quot; title=&quot;编辑器与窗口管理&quot;&gt;&lt;/a&gt;编辑器与窗口管理&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;文件之间切换 &lt;code&gt;Ctrl+Tab&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;左中
       
     
     </summary>
