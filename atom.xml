@@ -35,28 +35,6 @@
   </entry>
   
   <entry>
-    <title>JS一些常用的API</title>
-    <link href="http://yoursite.com/2018/12/20/JS%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E7%9A%84API/"/>
-    <id>http://yoursite.com/2018/12/20/JS一些常用的API/</id>
-    <published>2018-12-20T13:35:48.000Z</published>
-    <updated>2019-03-20T14:00:13.194Z</updated>
-    
-    <content type="html"><![CDATA[<ol><li>setTimeout()<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(function () &#123;</span><br><span class="line">  enter.classList.remove(&apos;active&apos;)</span><br><span class="line">&#125;, 2000)</span><br></pre></td></tr></table></figure></li></ol><p>2秒之后执行括号里的代码。</p><hr><ol start="2"><li>window.onscroll<br>window.scrollY<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">window.onscroll = function () &#123;</span><br><span class="line">  if (window.scrollY &gt; 0) &#123;</span><br><span class="line">    topNavBar.classList.add(&apos;sticky&apos;)</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    topNavBar.classList.remove(&apos;sticky&apos;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ol><p>window.onscroll：在用户滑动浏览器窗口的时候触发一个函数。<br>window.scrollY：获取到浏览器窗口滚动的高度。</p><hr><p>3.document.querySelectorAll()<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let liTags = document.querySelectorAll(&apos;nav.menu&gt;ul&gt;li&apos;)</span><br></pre></td></tr></table></figure></p><p>接受一个选择器，返回选择器对应的所有元素。</p><hr><ol start="4"><li>.onmouseenter<br>.onmouseleave<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">liTags[i].onmouseenter = function (x) &#123;</span><br><span class="line">  x.currentTarget.classList.add(&apos;active&apos;)</span><br><span class="line">&#125;</span><br><span class="line">liTags[i].onmouseleave = function (x) &#123;</span><br><span class="line">  x.currentTarget.classList.remove(&apos;active&apos;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ol><p>.onmouseenter：当鼠标进入一个元素的时候，会触发一个函数。<br>.onmouseleave：当鼠标离开一个元素的时候，会触发一个函数。</p><hr><ol start="5"><li>.preventDefault()<br>.getAttribute()<br>document.querySelector()<br>.offsetTop<br>window.scrollTo()</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">for(let i=0;i&lt;aTags.length;i++)&#123;</span><br><span class="line">  aTags[i].onclick = function(x)&#123;</span><br><span class="line">    x.preventDefault()  </span><br><span class="line">    let a = x.currentTarget   </span><br><span class="line">    let href = a.getAttribute(&apos;href&apos;)  </span><br><span class="line">    let element = document.querySelector(href) </span><br><span class="line">    let top = element.offsetTop   </span><br><span class="line">    window.scrollTo(0,top-70)   </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>.preventDefault()：阻止默认动作。<br>.getAttribute()：获取到这个标签上写的原文，而不是浏览器修改（比如加了http协议的东西）。<br>document.querySelector()：与加了All相比，只会返回一个元素，而不是一个数组。<br>.offsetTop：获取一个元素距离到页面顶部的像素数（不是浏览器窗口顶部）。<br>window.scrollTo()：让浏览器窗口滑动到某个位置，括号里是左右方向和上下方向滑动的位置的值。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ol&gt;
-&lt;li&gt;setTimeout()&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>模拟jQuery实现原理</title>
     <link href="http://yoursite.com/2018/12/20/%E6%A8%A1%E6%8B%9FjQuery%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86/"/>
     <id>http://yoursite.com/2018/12/20/模拟jQuery实现原理/</id>
@@ -73,6 +51,28 @@
 &lt;p&gt;大概模拟下jQuery实现原理。&lt;/p&gt;
 &lt;p&gt;细节注释如下：&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>JS一些常用的API</title>
+    <link href="http://yoursite.com/2018/12/20/JS%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E7%9A%84API/"/>
+    <id>http://yoursite.com/2018/12/20/JS一些常用的API/</id>
+    <published>2018-12-20T13:35:48.000Z</published>
+    <updated>2019-03-20T14:00:13.194Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>setTimeout()<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(function () &#123;</span><br><span class="line">  enter.classList.remove(&apos;active&apos;)</span><br><span class="line">&#125;, 2000)</span><br></pre></td></tr></table></figure></li></ol><p>2秒之后执行括号里的代码。</p><hr><ol start="2"><li>window.onscroll<br>window.scrollY<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">window.onscroll = function () &#123;</span><br><span class="line">  if (window.scrollY &gt; 0) &#123;</span><br><span class="line">    topNavBar.classList.add(&apos;sticky&apos;)</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    topNavBar.classList.remove(&apos;sticky&apos;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ol><p>window.onscroll：在用户滑动浏览器窗口的时候触发一个函数。<br>window.scrollY：获取到浏览器窗口滚动的高度。</p><hr><p>3.document.querySelectorAll()<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let liTags = document.querySelectorAll(&apos;nav.menu&gt;ul&gt;li&apos;)</span><br></pre></td></tr></table></figure></p><p>接受一个选择器，返回选择器对应的所有元素。</p><hr><ol start="4"><li>.onmouseenter<br>.onmouseleave<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">liTags[i].onmouseenter = function (x) &#123;</span><br><span class="line">  x.currentTarget.classList.add(&apos;active&apos;)</span><br><span class="line">&#125;</span><br><span class="line">liTags[i].onmouseleave = function (x) &#123;</span><br><span class="line">  x.currentTarget.classList.remove(&apos;active&apos;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ol><p>.onmouseenter：当鼠标进入一个元素的时候，会触发一个函数。<br>.onmouseleave：当鼠标离开一个元素的时候，会触发一个函数。</p><hr><ol start="5"><li>.preventDefault()<br>.getAttribute()<br>document.querySelector()<br>.offsetTop<br>window.scrollTo()</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">for(let i=0;i&lt;aTags.length;i++)&#123;</span><br><span class="line">  aTags[i].onclick = function(x)&#123;</span><br><span class="line">    x.preventDefault()  </span><br><span class="line">    let a = x.currentTarget   </span><br><span class="line">    let href = a.getAttribute(&apos;href&apos;)  </span><br><span class="line">    let element = document.querySelector(href) </span><br><span class="line">    let top = element.offsetTop   </span><br><span class="line">    window.scrollTo(0,top-70)   </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>.preventDefault()：阻止默认动作。<br>.getAttribute()：获取到这个标签上写的原文，而不是浏览器修改（比如加了http协议的东西）。<br>document.querySelector()：与加了All相比，只会返回一个元素，而不是一个数组。<br>.offsetTop：获取一个元素距离到页面顶部的像素数（不是浏览器窗口顶部）。<br>window.scrollTo()：让浏览器窗口滑动到某个位置，括号里是左右方向和上下方向滑动的位置的值。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;setTimeout()&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;
       
     
     </summary>
