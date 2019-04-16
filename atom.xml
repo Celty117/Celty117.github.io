@@ -265,8 +265,8 @@
     <title>git小记(1)</title>
     <link href="http://yoursite.com/2018/06/24/git%E5%B0%8F%E8%AE%B0(1)/"/>
     <id>http://yoursite.com/2018/06/24/git小记(1)/</id>
-    <published>2018-06-24T13:46:07.000Z</published>
-    <updated>2019-03-16T15:19:15.901Z</updated>
+    <published>2018-06-24T13:45:07.000Z</published>
+    <updated>2019-04-16T14:46:25.601Z</updated>
     
     <content type="html"><![CDATA[<h2 id="git-init"><a href="#git-init" class="headerlink" title="git init"></a>git init</h2><ul><li>该命令能初始化本地仓库,在当前目录新建一个git代码库.<br><img src="https://upload-images.jianshu.io/upload_images/7017681-649e469ff7c0e457.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="如图"></li></ul><hr><h2 id="git-add"><a href="#git-add" class="headerlink" title="git add"></a>git add</h2><ul><li>git add文件路径,用来将变动加到暂存区,添加指定文件到暂存区<br><img src="https://upload-images.jianshu.io/upload_images/7017681-56b35f16c404f841.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="css目录下的所有文件都被提交到暂存区了"></li></ul><hr><h2 id="git-commit-v"><a href="#git-commit-v" class="headerlink" title="git commit -v"></a>git commit -v</h2><ul><li>提交时显示所有diff信息,diff是Unix系统的一个很重要的工具程序。它用来比较两个文本文件的差异，是代码版本管理的基石之一。</li></ul>]]></content>
     
